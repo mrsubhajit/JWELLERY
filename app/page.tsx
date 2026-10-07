@@ -217,7 +217,7 @@ export default function Home() {
         {/* Bottom Buttons */}
         <div className="absolute bottom-12 md:bottom-16 left-0 right-0 z-10 max-w-5xl w-full mx-auto px-4 md:px-6 pointer-events-auto">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-hero-delay-1">
-            <a href="https://wa.me/message" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 bg-white text-primary hover:bg-gray-100 transition-all rounded-sm uppercase tracking-widest text-sm font-bold w-full sm:w-auto justify-center group shadow-lg">
+            <a href="https://wa.me/919316868680" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 bg-white text-primary hover:bg-gray-100 transition-all rounded-sm uppercase tracking-widest text-sm font-bold w-full sm:w-auto justify-center group shadow-lg">
               <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Connect on WhatsApp
             </a>
@@ -332,7 +332,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <a href="https://wa.me/message" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-background hover:bg-primary/90 transition-all rounded-sm uppercase tracking-widest text-sm font-medium group">
+              <a href="https://wa.me/919316868680" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-background hover:bg-primary/90 transition-all rounded-sm uppercase tracking-widest text-sm font-medium group">
                 <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
                 Chat with Us on WhatsApp
               </a>
@@ -373,7 +373,7 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <a href="https://wa.me/message" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-primary hover:bg-white transition-all rounded-sm uppercase tracking-widest text-sm font-medium group">
+            <a href="https://wa.me/919316868680" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 px-8 py-4 bg-accent text-primary hover:bg-white transition-all rounded-sm uppercase tracking-widest text-sm font-medium group">
               <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Connect with our experts
             </a>
@@ -418,7 +418,7 @@ export default function Home() {
               Alongside our modern lab-grown diamond collections, we maintain our unwavering commitment to absolute purity. Whether you are looking to secure a safe-haven asset for your investment portfolio or searching for the auspicious gift of pure precious metals for the festive season, our store offers certified 999-purity gold and silver coins with transparent, real-time pricing.
             </p>
             
-            <a href="https://wa.me/message" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-background transition-all rounded-sm uppercase tracking-widest text-sm font-medium group mx-auto">
+            <a href="https://wa.me/919316868680" target="_blank" rel="noreferrer" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-background transition-all rounded-sm uppercase tracking-widest text-sm font-medium group mx-auto">
               <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Inquire About Daily Rates
             </a>
