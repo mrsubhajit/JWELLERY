@@ -66,7 +66,7 @@ export default function Home() {
   ];
 
   return (
-    <main className="min-h-screen selection:bg-accent/30 relative text-primary font-sans bg-background">
+    <main className="min-h-screen selection:bg-accent/30 relative text-primary font-sans bg-background overflow-x-hidden">
 
       {/* ── Floating Jewellery Background Layer ── */}
       <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden">
@@ -160,22 +160,30 @@ export default function Home() {
       <JewelleryScene />
 
       {/* Hero Section */}
-      <section className="relative z-[2] h-screen w-full flex items-center justify-center overflow-hidden">
+      <section className="relative z-[2] h-screen w-full overflow-hidden bg-black">
         {/* Background Video */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 flex items-center justify-center">
+          {/* Mobile Video */}
           <video
             autoPlay
             muted
             loop
             playsInline
-            poster="/hero-bg.jpg"
-            className="absolute inset-0 w-full h-full object-cover scale-105"
+            className="w-full h-full object-cover md:hidden"
           >
-            <source src="/Model_wearing_white_dress_and_20261006173457.mp4" type="video/mp4" />
+            <source src="/Diamond_necklace_on_velvet_bust_20261007093533.mp4" type="video/mp4" />
           </video>
-          {/* Dark cinematic gradient overlays for text readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-background/20"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-background/70"></div>
+          {/* Desktop Video */}
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover hidden md:block"
+          >
+            <source src="/Diamond_necklace_on_velvet_bust_20261007080401.mp4" type="video/mp4" />
+          </video>
+          {/* Removed overlay to make video completely clear */}
           {/* Subtle golden shimmer line */}
           <div
             className="absolute bottom-0 left-0 right-0 h-[2px]"
@@ -187,31 +195,49 @@ export default function Home() {
           ></div>
         </div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-6 text-center mt-20 pointer-events-auto">
-          <h1 className="font-serif text-5xl md:text-7xl font-semibold text-primary mb-6 leading-tight drop-shadow-sm animate-hero">
+        {/* Logo at the top */}
+        <div className="absolute top-6 md:top-8 left-0 right-0 z-20 flex justify-center pointer-events-auto">
+          <Image
+            src="/logo2.jpg"
+            alt="Amardeep Jewellers Logo"
+            width={80}
+            height={80}
+            className="rounded-full shadow-lg border border-white/20 w-16 h-16 md:w-20 md:h-20 object-cover"
+          />
+        </div>
+
+        {/* Top Heading */}
+        <div className="absolute top-28 md:top-36 left-0 right-0 z-10 max-w-5xl mx-auto px-4 md:px-6 text-center pointer-events-auto">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)] animate-hero">
             30+ Years of Jewellery Trust, <br className="hidden md:block" />
-            <span className="italic text-accent">Reimagined for the Future</span>
+            <span className="italic text-accent drop-shadow-md">Reimagined for the Future</span>
           </h1>
+        </div>
 
-          <div className="max-w-3xl mx-auto space-y-6 text-primary/80 md:text-lg mb-10 animate-hero-delay-1">
-            <p>
-              For over three decades, our family has had the privilege of being part of your most cherished milestones. Built on a foundation of uncompromised craftsmanship and trust, we are proud to write our next chapter.
-            </p>
-            <p>
-              Stepping forward into a modern era, we are transforming our store into a dedicated destination for certified, brilliant, and sustainable lab-grown diamond jewellery—bringing you uncompromising luxury, purity, and beauty at a smarter value for today&apos;s conscious buyer.
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-hero-delay-2">
-            <a href="https://wa.me/message" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 bg-primary text-background hover:bg-primary/90 transition-all rounded-sm uppercase tracking-widest text-sm font-medium w-full sm:w-auto justify-center group">
+        {/* Bottom Buttons */}
+        <div className="absolute bottom-12 md:bottom-16 left-0 right-0 z-10 max-w-5xl w-full mx-auto px-4 md:px-6 pointer-events-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-hero-delay-1">
+            <a href="https://wa.me/message" target="_blank" rel="noreferrer" className="flex items-center gap-2 px-8 py-4 bg-white text-primary hover:bg-gray-100 transition-all rounded-sm uppercase tracking-widest text-sm font-bold w-full sm:w-auto justify-center group shadow-lg">
               <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
               Connect on WhatsApp
             </a>
-            <a href="#solitaires" className="flex items-center gap-2 px-8 py-4 border border-accent text-primary hover:bg-accent hover:text-background transition-all rounded-sm uppercase tracking-widest text-sm font-medium w-full sm:w-auto justify-center">
+            <a href="#solitaires" className="flex items-center gap-2 px-8 py-4 bg-black/40 backdrop-blur-md border border-white/40 text-white hover:bg-white hover:text-primary transition-all rounded-sm uppercase tracking-widest text-sm font-bold w-full sm:w-auto justify-center shadow-lg">
               Explore Solitaires
               <ArrowDown className="w-4 h-4" />
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Introduction Section */}
+      <section className="relative z-10 py-16 md:py-24 px-6 bg-background">
+        <div className="max-w-4xl mx-auto text-center space-y-6 text-primary/85 md:text-xl leading-relaxed font-medium animate-on-scroll">
+          <p>
+            For over three decades, our family has had the privilege of being part of your most cherished milestones. Built on a foundation of uncompromised craftsmanship and trust, we are proud to write our next chapter.
+          </p>
+          <p>
+            Stepping forward into a modern era, we are transforming our store into a dedicated destination for certified, brilliant, and sustainable lab-grown diamond jewellery—bringing you uncompromising luxury, purity, and beauty at a smarter value for today&apos;s conscious buyer.
+          </p>
         </div>
       </section>
 
@@ -240,8 +266,8 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16 md:mb-20 animate-on-scroll max-w-4xl mx-auto bg-white/85 backdrop-blur-md p-8 md:p-12 rounded-xl shadow-2xl border border-white/50">
-            <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-6 text-primary">
+          <div className="text-center mb-12 md:mb-20 animate-on-scroll max-w-4xl mx-auto bg-white/85 backdrop-blur-md p-6 md:p-12 rounded-xl shadow-2xl border border-white/50">
+            <h2 className="font-serif text-3xl md:text-5xl font-semibold mb-4 md:mb-6 text-primary">
               The Future of Fine Jewellery
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
@@ -286,10 +312,10 @@ export default function Home() {
               />
             </div>
 
-            <div className="animate-slide-right space-y-8 bg-background/80 backdrop-blur-md p-8 rounded-sm">
+            <div className="animate-slide-right space-y-6 md:space-y-8 bg-background/80 backdrop-blur-md p-6 md:p-8 rounded-sm">
               <div>
-                <h2 className="text-accent uppercase tracking-widest text-sm font-semibold mb-2">The Solitaire Curation</h2>
-                <h3 className="font-serif text-3xl md:text-5xl font-semibold mb-6">Uncompromising Brilliance, Certified Shine</h3>
+                <h2 className="text-accent uppercase tracking-widest text-xs md:text-sm font-semibold mb-2">The Solitaire Curation</h2>
+                <h3 className="font-serif text-2xl sm:text-3xl md:text-5xl font-semibold mb-4 md:mb-6">Uncompromising Brilliance, Certified Shine</h3>
                 <div className="w-16 h-[2px] bg-accent/50 mb-6"></div>
                 <p className="text-primary/80 md:text-lg leading-relaxed mb-6">
                   For three decades, our name has been synonymous with trust. We hand-select elite, conflict-free lab grown diamond solitaires (D-F color, VVS clarity) meeting the world&apos;s most highest standards. Every diamond of 0.75 carats and above is accompanied by an IGI certification.
@@ -322,9 +348,9 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16 animate-on-scroll">
-            <h2 className="font-serif text-3xl md:text-5xl font-semibold mb-6">Elevate Every Moment with Our Exclusive Collection</h2>
-            <p className="text-background/80 md:text-lg">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 animate-on-scroll">
+            <h2 className="font-serif text-2xl sm:text-3xl md:text-5xl font-semibold mb-4 md:mb-6">Elevate Every Moment with Our Exclusive Collection</h2>
+            <p className="text-background/80 text-sm md:text-lg">
               From stunning solitaire rings to brilliant tennis bracelets, our new collection is now available at our showroom. Because true luxury is personal, we curate directly for you.
             </p>
           </div>
@@ -380,8 +406,8 @@ export default function Home() {
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-16 md:mb-20 animate-on-scroll max-w-4xl mx-auto bg-white/85 backdrop-blur-md p-8 md:p-12 rounded-xl shadow-2xl border border-white/50 md:border-primary/10">
-            <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-6 text-primary">
+          <div className="text-center mb-12 md:mb-20 animate-on-scroll max-w-4xl mx-auto bg-white/85 backdrop-blur-md p-6 md:p-12 rounded-xl shadow-2xl border border-white/50 md:border-primary/10">
+            <h2 className="font-serif text-3xl md:text-5xl font-semibold mb-4 md:mb-6 text-primary">
               Purity You Can Measure
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
