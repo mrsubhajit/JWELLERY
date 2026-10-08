@@ -196,7 +196,7 @@ export default function Home() {
         </div>
 
         {/* Logo at the top */}
-        <div className="absolute top-6 md:top-8 left-0 right-0 z-20 flex justify-center pointer-events-auto">
+        <div className="absolute top-6 md:top-8 left-0 right-0 z-20 flex justify-center items-center gap-3 md:gap-4 pointer-events-auto">
           <Image
             src="/logo2.jpg"
             alt="Amardeep Jewellers Logo"
@@ -204,6 +204,7 @@ export default function Home() {
             height={80}
             className="rounded-full shadow-lg border border-white/20 w-16 h-16 md:w-20 md:h-20 object-cover"
           />
+          <span className="font-serif text-2xl md:text-3xl text-white font-semibold drop-shadow-md">Amardeep Jewellers</span>
         </div>
 
         {/* Top Heading */}
